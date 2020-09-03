@@ -2,10 +2,10 @@
 	"name": "ruby_on_rails_template",
 	"private": true,
 	"scripts": {
-		"stylelint": "npx stylelint \"**/*.scss\"",
+		"stylelint": "npx stylelint \"**/*.{css,scss}\"",
 		"rubocop": "rubocop",
 		"test": "npm run stylelint && rubocop",
-		"fix": "npx stylelint --fix \"**/*.scss\"",
+		"fix": "npx stylelint --fix \"**/*.{css,scss}\"",
 		"rubocopfix": "rubocop -A"
 	},
 	"dependencies": {
