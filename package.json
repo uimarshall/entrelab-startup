@@ -4,7 +4,9 @@
 	"scripts": {
 		"stylelint": "npx stylelint \"**/*.scss\"",
 		"rubocop": "rubocop",
-		"test": "npm run stylelint && rubocop"
+		"test": "npm run stylelint && rubocop",
+		"fix": "npx stylelint --fix \"**/*.scss\"",
+		"rubocopfix": "rubocop -A"
 	},
 	"dependencies": {
 		"@rails/actioncable": "^6.0.0",
