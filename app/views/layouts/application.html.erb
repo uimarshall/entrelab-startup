@@ -13,7 +13,10 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand text-white" href="/"><i class="fa fa-language" aria-hidden="true"></i> EntreLab</a>
+      <%# <a class="navbar-brand text-white" href="/"><i class="fa fa-language" aria-hidden="true"></i> EntreLab</a> %>
+      <%= link_to root_path, class: "navbar-brand text-white"  do %>
+        <i class="fa fa-language" aria-hidden="true"></i> EntreLab
+      <% end %>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -25,7 +28,11 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
+            <%# <a class="nav-link" href="/about">About</a> %>
+            <%# using URI pattern '/about' %>
+            <%# <%= link_to "About", "/about", class: "nav-link" %>
+            <%# Using prefix for dynamic routing %>
+            <%= link_to "About", about_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
