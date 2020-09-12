@@ -6,7 +6,7 @@ ruby '2.6.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 
-#Use bootstrap for frontend-UI layout
+# Use bootstrap for frontend-UI layout
 
 # gem 'bootstrap', '~> 4.5', '>= 4.5.2'
 # Use sqlite3 as the database for Active Record
@@ -48,8 +48,8 @@ end
 group :development do
   gem 'rubocop', '~>0.81.0'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
   gem 'hirb', '~> 0.7.3'
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :test do
