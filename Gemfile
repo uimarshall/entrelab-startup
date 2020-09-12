@@ -7,8 +7,10 @@ ruby '2.6.6'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 
 # Use bootstrap for frontend-UI layout
-
 gem 'bootstrap', '~> 4.5', '>= 4.5.2'
+
+# Use font awesome for adding icons
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.4'
 group :development, :test do
