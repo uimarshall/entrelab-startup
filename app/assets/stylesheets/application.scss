@@ -14,7 +14,7 @@
  *= require_self
  */
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
-@import "bootstrap-sprockets";
+// @import "bootstrap-sprockets";
 @import "bootstrap";
 // bootstrap-sprockets must be imported before bootstrap for the icon fonts to work.
 
@@ -48,4 +48,11 @@ h3 {
     #203a43,
     #0f2027
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: greenyellow;
+  opacity: 0.8;
 }
