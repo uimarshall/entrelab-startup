@@ -1,0 +1,14 @@
+<div class="container">
+  <h3 class="text-center">Contact Us</h3>
+  <%= form_for '/contacts' do |f| %>
+    <%= f.label :name, "Your name" %>
+    <%= f.text_field :name %>
+    <%= f.label :email, "Your email" %>
+    <%= f.text_field :email %>
+    <%= f.label :comments, "Your comments" %>
+    <%= f.text_area :comments %>
+    <%= f.submit "Submit" %>
+    <!-- form_for @object, html: { multipart: true }, do |f| -->
+    <!-- form_for @object, html: { class: "classname" }, do |f| -->
+  <% end %>
+</div>
