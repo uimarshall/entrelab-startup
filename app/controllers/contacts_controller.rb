@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  # Anytime this code runs, it creates a new blank 'contact obj' in the machine memory
   def new
     @contact = Contact.new # An instance of the Contact class in the model
   end

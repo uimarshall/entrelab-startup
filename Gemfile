@@ -12,6 +12,9 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.2'
 # gem 'jquery-rails'
 # Use font awesome for adding icons
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
+
+# Use hirb for better database table display in console
+gem 'hirb', '~> 0.7.3'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.4'
 group :development, :test do
@@ -51,7 +54,7 @@ end
 group :development do
   gem 'rubocop', '~>0.81.0'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'hirb', '~> 0.7.3'
+
   gem 'web-console', '>= 3.3.0'
 end
 
