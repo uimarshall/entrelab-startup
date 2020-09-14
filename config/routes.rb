@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get 'about', to: 'pages#about' #A 'get' req points to '/about' and calls about mtd in pages controller
   resources :contacts, only: [:create] #short way of writing route
-  get 'contact-us', to: 'contacts#new'
+  get 'contact-us', to: 'contacts#new', as: 'new_contact'
 end
