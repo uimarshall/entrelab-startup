@@ -7,10 +7,11 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      redirect_to new_contact_path, notice: 'Contact information saved!'
+      flash[:success] =  'Contact information saved!'
+      redirect_to new_contact_path 
     else
-      redirect_to new_contact_path, notice: 'An error occured, try again!'
-
+      flash[:danger]= @contact.errors.full_messages.join(", ")
+      redirect_to new_contact_path 
     end
   end
   #   Whitelist info collected fromm the forms -- meaning ensure info is securely saved to Db
