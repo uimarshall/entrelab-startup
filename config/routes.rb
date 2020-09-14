@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   #The controller then picks the corresponding 'home page in the views' and sends to d user
   root to: "pages#home"
   get 'about', to: 'pages#about' #A 'get' req points to '/about' and calls about mtd in pages controller
-  resources :contacts #short way of writing route
+  resources :contacts, only: [:create] #short way of writing route
+  get 'contact-us', to: 'contacts#new'
 end
