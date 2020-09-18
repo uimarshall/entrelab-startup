@@ -15,6 +15,9 @@ gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 
 # Use hirb for better database table display in console
 gem 'hirb', '~> 0.7.3'
+
+# Use Devise for user authentication
+gem 'devise', '~> 4.2'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.4'
 group :development, :test do
