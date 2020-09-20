@@ -1,4 +1,30 @@
-<div class="landing-banner text-center container-fluid py-5 text-white">
+<div class="landing-banner text-center container-fluid py-5 text-white mb-4">
   <h1>Welcome to EntreLab</h1>
   <h3>Meet entrepreneurs to convert your skills into <strong class="text-dark">$</strong><span class="text-info">earnings...<i class="fa fa-money mr-2" aria-hidden="true"></i></span></h3>
+</div>
+<div class="container mb-4">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <h4 class="card-title text-muted">Basic Membership Link</h4>
+          <p class="card-text">Sign up for free and get basic access to the community</p>
+        </div>
+        <div class="card-body">
+          <%= link_to "Sign up with Basic Plan", new_user_registration_path, class: 'btn btn-primary btn-lg btn-block' %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card text-center h-100">
+        <div class="card-body">
+          <h4 class="card-title text-muted">Pro Membership Link</h4>
+          <p class="card-text">Sign up for the pro account for $10/month and get access to the community and contact information!</p>
+        </div>
+        <div class="card-body">
+          <%= link_to "Sign up with Basic Plan", new_user_registration_path, class: 'btn btn-success btn-lg btn-block' %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
