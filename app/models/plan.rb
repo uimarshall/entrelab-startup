@@ -1,8 +1,3 @@
 class Plan < ActiveRecord::Base
-    has_many :users
-
-    
-
-    private
-        
+  has_many :users
 end
