@@ -4,3 +4,13 @@ Memberships
 - User should see link for zpro plan on home page
 - Basic plan link should point to regular Devise sign up form
 - Pro plan link should point to a custom sign up form
+
+Active Record - ORM
+*********************************************************
+ORM is a way of giving you the benefit of not writing raw SQL codes for your DB.
+It sits on top of the actual SQL
+E.g SELECT * FROM Customers; == Customer.all in ORM.
+
+Future Improvements
+**********************************************************
+- Add forums for discussion between devs and entrepreneur
