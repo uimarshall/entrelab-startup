@@ -1,40 +1,19 @@
 <div class="container mt-5">
   <% if params[:plan] =='2' %>
     <h2 class="text-center h1 mb-3">Pro Account Sign Up</h2>
+    <p class="card-text text-center text-muted">Sign up for the <strong><em>Pro account</em></strong>  for <strong><em>$9.99/month</em></strong>  and get access to the community and contact information!</p>
   <% else %>
-    <h2 class="text-center h1 mb-3">Basic Account Sign Up</h2>
+    <h2 class="text-center h1 mb-3">Basic Account</h2>
+    <p class="card-text text-center text-muted">Sign up for <strong><em>free</em></strong>  and get basic access to the community. But you can get more for  Pro Membership!</p>
   <% end %>
   <%# <h2 class="text-center h1 mb-3">Sign up</h2> %>
   <div class="row">
     <div class="col-md-4 offset-4">
-      <div class="card">
-        <div class="card-header text-center h2 text-muted">
-          EntreLab
-        </div>
-        <div class="card-body">
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= render "devise/shared/error_messages", resource: resource %>
-            <div class="field form-group">
-              <%= f.label :email %><br />
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
-            </div>
-            <div class="field form-group">
-              <%= f.label :password %>
-              <% if @minimum_password_length %>
-                <em>(<%= @minimum_password_length %> characters minimum)</em>
-              <% end %><br />
-              <%= f.password_field :password, autocomplete: "new-password", class: "form-control" %>
-            </div>
-            <div class="field form-group mb-4">
-              <%= f.label :password_confirmation %><br />
-              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control" %>
-            </div>
-            <div class="actions">
-              <%= f.submit "Sign up", class: 'form-control btn btn-info btn-block' %>
-            </div>
-          <% end %>
-        </div>
-      </div>
+      <% if params[:plan] =='2' %>
+        <%= render 'pro_form' %>
+      <% else %>
+        <%= render 'basic_form' %>
+      <% end %>
       <div class="text-center my-3"><span class="text-muted">Already have an Account?</span>  <%= render "devise/shared/links" %></div>
     </div>
   </div>
