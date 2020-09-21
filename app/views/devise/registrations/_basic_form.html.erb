@@ -1,4 +1,3 @@
- 
 <div class="card">
   <div class="card-header text-center h2 text-muted">
     EntreLab
@@ -6,6 +5,7 @@
   <div class="card-body">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
+      <%= hidden_field_tag 'plan', params[:plan] %>
       <div class="field form-group">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
