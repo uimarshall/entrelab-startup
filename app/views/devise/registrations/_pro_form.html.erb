@@ -3,8 +3,9 @@
     EntreLab
   </div>
   <div class="card-body">
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name),html: {id: 'pro_form'}) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
+      <%= hidden_field_tag 'plan', params[:plan] %>
       <div class="field form-group">
         <%= f.label :email %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
@@ -34,7 +35,7 @@
         <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year" } %>
       </div>
       <div class="actions">
-        <%= f.submit "Sign up", class: 'form-control btn btn-info btn-block' %>
+        <%= f.submit "Sign up", class: 'form-control btn btn-info btn-block', id: 'pro-submit-btn' %>
       </div>
     <% end %>
   </div>

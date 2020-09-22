@@ -20,6 +20,13 @@ gem 'hirb', '~> 0.7.3'
 gem 'devise', '~> 4.2'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3', '~> 1.4'
+
+# Use Stripe for payment processing
+gem 'stripe', '~> 5.25'
+
+# Use figaro for ENV variables
+gem 'figaro', '~> 1.2'
+
 group :development, :test do
   gem 'sqlite3'
 end

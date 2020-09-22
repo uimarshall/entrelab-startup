@@ -9,7 +9,13 @@
     <%# Google Fonts %>
     <link href="//fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://js.stripe.com/v3/', type: 'text/javascript' %>
+    <%# <script src="https://js.stripe.com/v3/"></script> %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
+    <%# <script>
+      var stripe = Stripe(STRIPE_PUBLIC_KEY);
+    </script> %>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -56,7 +62,7 @@
             <%= link_to "Log Out",  destroy_user_session_path, method: :delete, class: "nav-link btn btn-outline-success my-2 my-sm-0 mr-3" %>
           <% else %>
             <%= link_to "Log In",  new_user_session_path, class: "nav-link btn btn-outline-success my-2 my-sm-0 mr-3" %>
-            <%# <%= link_to "Sign Up",   new_user_registration_path, class: "nav-link btn btn-outline-info my-2 my-sm-0" %> %>
+            <%# <%= link_to "Sign Up",   new_user_registration_path, class: "nav-link btn btn-outline-info my-2 my-sm-0" %>
           <% end %>
         </form>
       </div>
