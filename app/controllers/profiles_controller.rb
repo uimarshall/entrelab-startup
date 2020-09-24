@@ -16,7 +16,7 @@ class ProfilesController < ApplicationController
         @profile = @user.build_profile(profile_params)
         if @profile.save
             flash[:success] = 'Profile Successfully created'
-            redirect_to root_path
+            redirect_to user_path(params[:user_id])#we need to pass in an 'id' bcos of the URI '/users/:id'
         else 
             render action: :new   
             

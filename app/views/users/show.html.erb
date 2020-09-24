@@ -1,4 +1,8 @@
 <%= @user.inspect %>
-<%= @user.each do |u|  %>
-  <h2><%= u.email %></h2>
+<%= @user.profile.inspect %>
+<div><%= @user.profile.first_name %></div>
+<div><%= @user.profile.last_name %></div>
+<% if current_user.plan_id == 2 %>
+  <div><%= @user.profile.phone_number %></div>
+  <div><%= @user.profile.contact_email %></div>
 <% end %>
