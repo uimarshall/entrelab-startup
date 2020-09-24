@@ -26,3 +26,11 @@ E.g SELECT * FROM Customers; == Customer.all in ORM.
 Future Improvements
 **********************************************************
 - Add forums for discussion between devs and entrepreneur
+
+User Profiles
+******************************************************************
+- Each user should have one Profile
+- Each user should see link to new profile form upon signing up
+- User should be able to view and create their profile
+- User profile should have a profile picture
+- User should be able to view all user profile.
