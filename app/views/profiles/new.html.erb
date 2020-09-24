@@ -1,1 +1,13 @@
-<h1>profile</h1>
+<%# <h1>profile</h1> %>
+<%# <%= @me %>
+<%# <%= debug(params) if Rails.env.development? %>
+<div class="container my-5">
+  <h2 class="text-center h1 mb-3">Create Your Profile</h2>
+  <p class="card-text text-center text-muted">Be a part of EntreLab community! <strong>Fill out your profile</strong></p>
+  <%# <h2 class="text-center h1 mb-3">Sign up</h2> %>
+  <div class="row">
+    <div class="col-md-6 offset-3">
+      <%= render 'profile_form' %>
+    </div>
+  </div>
+</div>
