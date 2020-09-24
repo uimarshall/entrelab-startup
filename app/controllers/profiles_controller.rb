@@ -10,7 +10,9 @@ class ProfilesController < ApplicationController
     def create
         # Ensure we have the user filling out the form
         @user = User.find(params[:user_id])
-        # create profile linked to this specific user
+        # create profile associated with this specific user
+        # we use '@user.build_profile' bcos a user 'has_one' profile
+        # we will use '@user.profiles.build' for a user 'has_many' profiles
         @profile = @user.build_profile(profile_params)
         if @profile.save
             flash[:success] = 'Profile Successfully created'
