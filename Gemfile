@@ -27,6 +27,9 @@ gem 'stripe', '~> 5.25'
 # Use figaro for ENV variables
 gem 'figaro', '~> 1.2'
 
+# Use paperclip for image upload
+gem 'paperclip', '~> 6.1'
+
 group :development, :test do
   gem 'sqlite3'
 end
