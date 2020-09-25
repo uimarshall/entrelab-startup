@@ -1,18 +1,33 @@
 .avatar-img {
-	width: 128px;
-	height: 128px;
+  width: 128px;
+  height: 128px;
 }
+
+.job-title-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #2c2da4;
+  border-radius: 4px;
+  background-color: #337bb6;
+  color: #fff;
+  text-align: center;
+}
+
 .card.profile-block {
-	color: #fff;
-	h4 {
-		margin-top: 0;
-	}
+  color: #fff;
+
+  h4 {
+    margin-top: 0;
+  }
 }
+
 .card.profile-desc {
-	background-color: #5cb85c;
-	border-color: #4cae4c;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
 }
+
 .card.profile-contact-info {
-	background-color: #5bc8de;
-	border-color: #46ae4c;
+  background-color: #5bc8de;
+  border-color: #46ae4c;
 }
